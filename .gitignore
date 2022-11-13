@@ -1,9 +1,10 @@
-HELP.md
+
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+!**/bin/
 ### STS ###
 .apt_generated
 .classpath
@@ -12,6 +13,9 @@ target/
 .settings
 .springBeans
 .sts4-cache
+.class
+*.txt
+
 
 ### IntelliJ IDEA ###
 .idea
@@ -31,48 +35,7 @@ build/
 
 ### VS Code ###
 .vscode/
-.code-workspace
-
-##############################
-## Java
-##############################
-.mtj.tmp/
-*.class
-*.jar
-*.war
-*.ear
-*.nar
-hs_err_pid*
-
-##############################
-## Maven
-##############################
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-pom.xml.bak
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-.mvn/wrapper/maven-wrapper.jar
-
-##############################
-## Eclipse
-##############################
-.settings/
-bin/
-tmp/
-.metadata
-.classpath
-.project
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.loadpath
-.factorypath
+/bin/
 /.apt_generated_tests/
+
+

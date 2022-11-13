@@ -15,7 +15,7 @@ public class OrderNotFoundException extends Exception{
 
 	@Override
 	public String toString() {
-		return "TrainerNotFoundException " + msg;
+		return "OrderNotFoundException " + msg;
 	}
 
 }
