@@ -74,10 +74,10 @@ public class OrderController {
 	
 	
 	/**
-	 * @see Get trainer detailes based on trainerId endpoint
-	 * @param id -> trainerId
-	 * @return trainer
-	 * @throws TrainerNotFoundException
+	 * @see Get Order details based on OrderId endpoint
+	 * @param id -> Id
+	  * 
+	 * @throws OrderNotFoundException
 	 */
 	@GetMapping("/order/{id}")
 	public Order getOrders(@PathVariable Integer id) throws OrderNotFoundException {
