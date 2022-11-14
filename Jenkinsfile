@@ -41,7 +41,7 @@ stage('Run Docker image') {
 steps {
 echo "-=- run Docker image -=-"
 
-bat "docker run --name=order-service -p 8100:8100 order-service"
+bat "docker run --name=order-service --detach -p 8100:8100 order-service "
 }
 }
 
