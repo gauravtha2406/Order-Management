@@ -27,6 +27,6 @@ The Problem Statement is to Create Order Management Service and Validate the end
 ![](Snapshots/Prometheus.png)
 
 
-### Prometheus Dashboard
+### Docker
 ![](Snapshots/Docker.png)
 
