@@ -41,17 +41,25 @@ public class OrderController {
 		Order retOrder = service.saveOrder(order);
 		return ResponseEntity.status(HttpStatus.CREATED).body(retOrder);
 	}
+
 	
 	/**
-	 * @see update existing order endpoint
+	 * @see update existing order endpoint based on Orderid
 	 * @param order
 	 * @return order ResponseEntity
 	 */
-	@PutMapping("/order")
-	public ResponseEntity<Order> updateOrder(@RequestBody Order order) {
+	@PutMapping("/order/{id}")
+	public ResponseEntity<Order> updateOrder(@RequestBody Order order) throws OrderNotFoundException {
 		Order retOrder = service.updateOrder(order);
-		return ResponseEntity.status(HttpStatus.CREATED).body(retOrder);
+		if(service.getOrderByIdAsObject(order.getId())!=null) {
+			Order updateOrder = service.updateOrder(retOrder);
+			return ResponseEntity.status(HttpStatus.OK).body(updateOrder);
+		} else {
+			throw new OrderNotFoundException("Student Not Found to Update" + order.toString());
+		}
+//		return ResponseEntity.status(HttpStatus.CREATED).body(retOrder);
 	}
+
 	
 	
 	/**
