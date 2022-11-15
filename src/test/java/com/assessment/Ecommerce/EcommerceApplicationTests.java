@@ -32,9 +32,9 @@ class EcommerceApplicationTests {
 	public void setUp() {
 		System.out.println("+++++++++-----------------------------------------------------------------+++++++++");
 		Optional<Order> user = Optional
-				.of(new Order(101,"Delivered",860, null, null, null));
+				.of(new Order(101,"Delivered",860, null, null, null,null));
 		List<Order> list = Arrays
-				.asList(new Order(101, "Gaurav",890,null, null, null));
+				.asList(new Order(101, "Gaurav",890,null, null, null,null));
 
 		// mocked object
 		when(repo.findById(101)).thenReturn(user);
@@ -60,7 +60,7 @@ class EcommerceApplicationTests {
 	@Test
 	@DisplayName("save the valid Order and acknowledge the same")
 	void saveTrainerToTheServer() {
-		Order order = new Order(102, "Delivered", 980, null, null, null);
+		Order order = new Order(102, "Delivered", 980, null, null, null,null);
 
 		assertNotNull(service.saveOrder(order));
 	}
