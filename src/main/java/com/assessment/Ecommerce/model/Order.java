@@ -3,6 +3,8 @@ package com.assessment.Ecommerce.model;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.springframework.data.annotation.Id;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class Order {
 
-	
+	@Id
 	private Integer id;
 	private String status;
 	private Integer total;
